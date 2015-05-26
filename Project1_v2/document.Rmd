@@ -38,10 +38,12 @@ K-means is one of the simplest unsupervised learning clustering algorithms that 
 
 Instruction for users
 ---------------------
+Please download the documentation file from https://github.com/lingyunsong/Developing-data-products/blob/master/Project1_v2/document.md  and read it.    
+
 ### Two options for using this shiny app:
-1. Use server.R and ui.R on your own computer  
+1. Use server.R and ui.R on your own computer   
 (1)Make sure that you have R installed.  
-(2)Download the two files server.R and ui.R from my github repo to your local computer.  
+(2)Download the two files server.R and ui.R from https://github.com/lingyunsong/Developing-data-products/tree/master/Project1_v2    
 (3)Place the files into an app directory (for example, the directory is named as "my_app") in your working directory. launch the app in R with the following commands:  
 
       install.packages("shiny")  

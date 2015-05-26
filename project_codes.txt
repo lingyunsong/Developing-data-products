@@ -1,0 +1,97 @@
+###Data product___John Hopkins data science series___project###
+
+#Install devtools
+
+
+
+
+#Install slidify: this step is tricky because the course did not give a correct answer. By googling I found 
+
+https://github.com/ramnathv/slidify/issues/262
+
+
+pkgs <- c("slidify", "slidifyLibraries", "rCharts")
+devtools::install_github(pkgs, "ramnathv", ref = "dev")
+
+Otherwise the libraries are not installed and will give error information and could not slidify Rmd file to html file.
+
+library(knitr)
+slidify('index.Rmd')
+#browse the html generated from slidify(). 
+browseURL('index.html')
+
+#Another thing is: must set up chrome as the default program (go to control panel --> default program). IE does not work for browsing html file.
+
+#Use "knit HTML" to generate html and slidify directly.
+
+
+#####Publish the slidified slides to Rpubs######
+
+To publish on RPubs, I did the following:
+slidify("index.Rmd")  #To make the .html
+browseURL("index.html") #To verify that it's working
+runDeck() #To re-verify it's worknig
+options(rpubs.upload.method = "internal") #To set up what it needs to upload (ssl issue?)
+publish_rpubs(title = 'my title goes here ', html_file = 'index.html')
+
+
+# It is published at the following Address:
+http://rpubs.com/lingyun/83524
+
+
+
+
+####################################################################
+#Deploy shiny app
+
+ devtools::install_github("rstudio/shinyApps")
+
+
+#Login  https://www.shinyapps.io/ by using Github account
+
+#give a name to this app website.
+
+# this website gives a direction: https://www.shinyapps.io/admin/#/dashboard
+
+#Copy the token from dashboard and paste to R console
+
+#Deploy
+library(shinyapps)
+
+shinyapps::deployApp("project1_v2")
+
+#after deployment finishs a web page appears: https://developingdataproductproject1.shinyapps.io/project/
+
+# The app status can be watched from https://www.shinyapps.io/admin/#/dashboard
+
+#############However the document file cannot be shown in shinyapp.io
+
+#### Do  I have to try shiny server ?
+
+Temperarily I just deploy app on shinyapps.io. Not shiny server. It is too much.
+
+
+
+
+
+
+
+
+
+
+
+
+######################################################################
+#submit shiny app to github and can be downloaded from this address:
+
+https://github.com/lingyunsong/Developing-data-products/tree/master/Project1_v2
+
+#submit Project2 to github and can be viewed here:
+https://github.com/lingyunsong/Developing-data-products/blob/master/data_product_project2/index.md
+
+######################################################################
+
+#one problem that I encountered is that when I used "knitr html" to convert Rmd file to html file, the md file was not updated.
+
+This problem is solved by using command line: knit('document.Rmd')
+
