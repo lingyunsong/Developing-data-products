@@ -1,3 +1,5 @@
+#For Coursera data science series:Developing data product, project1
+
 library(shiny)
 library(cluster)
 

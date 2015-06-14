@@ -1,4 +1,4 @@
-
+#For Coursera data science series:Developing data product, project1
 #Define a server for the shiny app
 shinyServer(function(input, output, session) {
   
