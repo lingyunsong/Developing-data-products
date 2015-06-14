@@ -38,7 +38,7 @@ K-means is one of the simplest unsupervised learning clustering algorithms that 
 
 Instruction for users
 ---------------------
-Please download the documentation file from https://github.com/lingyunsong/Developing-data-products/blob/master/document.md  and read it.    
+Please download the documentation file from https://github.com/lingyunsong/Developing-data-products/blob/master/Project1_v2/document.md  and read it.    
 
 ### Two options for using this shiny app:
 1. Use server.R and ui.R on your own computer   
